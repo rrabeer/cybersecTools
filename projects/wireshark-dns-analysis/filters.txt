@@ -1,0 +1,9 @@
+# Handy Wireshark display filters
+dns
+dns.flags.rcode != 0
+dns && dns.flags.response == 1 && dns.a
+dns.qry.name contains ".top"
+dns.qry.name contains "xn--"      # punycode
+dns.qry.name.len > 40             # very long domains
+frame.len > 1000 && dns            # oversized frames with DNS
+tcp.port == 53 || udp.port == 53   # raw port view
