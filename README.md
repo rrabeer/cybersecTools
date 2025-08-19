@@ -1,6 +1,7 @@
 # Cybersecurity Homelab Portfolio
 
 This repo showcases hands-on security projects by Rabbani Rasha
+In this repo I will walk you through some simple tools and how to use them. Lets learn together!
 ## Projects
 
 - **SIEM (Splunk) – SSH Brute-Force Detection** (`projects/siem-splunk-ssh-bruteforce/`)
