@@ -13,8 +13,15 @@ LOG_LINE = re.compile(
     r'^(?P<mon>\w{3})\s+(?P<day>\d{1,2})\s+(?P<time>\d{2}:\d{2}:\d{2}).*?Failed password.*?from\s+(?P<ip>\d{1,3}(?:\.\d{1,3}){3})'
 )
 
-MONTHS = {m: i for i, m in enumerate(
-    ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], start=1
+MONTHS = {
+    m: i
+    for i, m in enumerate(
+        ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+         "Aug", "Sep", "Oct", "Nov", "Dec"],
+        start=1
+    )
+}
+
 )}
 
 def parse_ts(mon: str, day: str, time_str: str, year: int) -> datetime:
