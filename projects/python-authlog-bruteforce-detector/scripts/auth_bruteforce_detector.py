@@ -23,6 +23,10 @@ MONTHS = {
 }
 
 )}
+MONTHS = {
+    m: i
+    for i, m in enumerate(["Jan", "Feb", "Mar"], start=1)
+}   
 
 def parse_ts(mon: str, day: str, time_str: str, year: int) -> datetime:
     ts = datetime.strptime(f"{year}-{MONTHS[mon]:02d}-{int(day):02d} {time_str}", "%Y-%m-%d %H:%M:%S")
